@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+   *{padding:0;margin:0}
+	#banner{
+		width: 900px;height: 428px;margin: 0 auto;position:relative;
+	}
+	#banner a{
+		text-decoration:none;width:50px;height:50px;background:rgba(0,0,0,0);color:#fff;
+		text-align:center;line-height:44px;border-radius:50%;display:none;
+		position:absolute;float:left;font-size:50px;font-weight:300;
+	}
+	#banner img{
+		width: 900px;
+	}
+	#banner a:hover{
+		background:rgba(0,0,0,0.4);
+	}
+	a#pre{
+		left:20px;top:189px;
+	}
+	a#next{
+		right:20px;top:189px;
+	}
+	ul{
+		position:absolute;left:50%;margin-left:-30px;bottom:-10px;z-index:1;
+	}
+	ul li {
+		width:20px;height:4px;background:#ccc;list-style:none;
+		float:left;margin-right:6px;
+	}
+  </style>
+ </head>
+ <body>
+   <div id="banner">
+		<img id="img"src="img/banner-1.jpg">
+		<a id="pre"href="javascript:;">&lt;</a>
+		<a id="next"href="javascript:;">&gt;</a>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+   </div>
+ </body>
+</html>
+<script>
+	var oPre = document.getElementById('pre');
+	var oBanner = document.getElementById('banner');
+	var oNext = document.getElementById('next');
+	var oImg = document.getElementById('img');
+	var oDian = document.getElementsByTagName('li');
+	var a = 1;
+	var timer;
+	oDian[a-1].style.background='#555252';
+	autos();
+	oBanner.onmouseout = function(){
+		oPre.style.display = 'none';
+		oNext.style.display = 'none';
+		autos();
+	}
+	oBanner.onmouseover = function(){
+		oPre.style.display = 'block';
+		oNext.style.display = 'block';
+		clearInterval(timer);
+	}
+	
+	oPre.onclick = function(){
+		a--;
+
+		if(a == 0){
+			a = 3;
+		}
+		move();
+	}
+	oNext.onclick = function(){
+		a++;
+		if(a == 4){
+			a = 1;
+		}
+		move();
+	}
+	for(var j = 0;j<oDian.length;j++){
+		oDian[j].idx = j;
+		oDian[j].onclick = function(){
+			a = this.idx+1;
+			move();
+		}
+	}
+	function autos (){
+		timer = setInterval(function(){
+			a++;
+			if(a == 4){
+				a = 1;
+			}
+			move();
+		},2000)
+	}
+	function move(){
+		for(var i = 0;i<oDian.length;i++){
+			oDian[i].style.background='#ccc';
+		}
+		oDian[a-1].style.background='#555252';
+		oImg.src = 'img/banner-'+a+'.jpg';
+	}
+</script>
+

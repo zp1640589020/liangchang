@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus?">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+	<style>
+	*{margin:0px;padding:0px;}
+	li{list-style:none;}
+	a{text-decoration:none;}
+	img{border:none;}
+	 .shouye{
+	  width:100%;
+		height:60px;
+		background:#25292e;
+	 }
+	 .shouye-1{
+	  width:1000px;
+		height:60px;
+		margin:0 auto;
+	 }
+	 .shouye-1>img{
+	  margin-top:5px;
+	 }
+	 .shouye-2{
+	  float:right;
+		width:300px;
+		height:60px; 
+	 }
+	 .shouye-2 ul li{
+	  float:left;
+		margin:0 8px;
+		line-height:60px;
+	 }
+	 .shouye-2 ul li a{
+	  font-size:12px;
+    color:#666;
+	 }
+	 .shouye ul .dr a{
+	  color:#fff;
+		padding-left:15px;
+	 }
+   .shouye ul .zc a{
+	  color:#fff;
+	 }
+	 .shouye ul .dr{
+	  margin-right:6px;
+	 }
+	 .shouye ul li:hover a{
+	  color:#fff;
+	 }
+	 .shouye ul li a{
+	  height:60px;
+	 }
+	 .shouye ul .gwc{
+	  position:relative;
+	 }
+	 .shouye ul .gwc .gwc-sp{
+	  width:320px;
+		height:122px;
+		background:red;
+		position:absolute;
+    top:40px;left:-140px;
+		z-index:100;
+		display:none;
+	 }
+   .shouye ul .gwc:hover .gwc-sp{
+	  display:block;
+	 }
+	 .shouye ul .gwc>.gwc-sp>.gwc-top{
+	  width:320px;
+		height:70px;
+		background:#25292e;
+		line-height:70px;
+		text-align:center;
+	 }
+	 .shouye ul .gwc>.gwc-sp>.gwc-bottom{
+	  width:320px;
+		height:52px;
+		background:#1a85bb;
+		line-height:52px;
+		text-align:center;
+		opacity:1;
+	 }
+   .shouye ul .gwc>.gwc-sp>.gwc-bottom a{
+	  font-size:14px;
+	 }
+   .shouye ul .gwc>.gwc-sp>.gwc-bottom:hover{
+	  opacity:0.9;
+	 }
+	 .shouye ul .xx .xiao{
+	  width:192px;
+		height:264px;
+		position:absolute;
+    top:60px;left:-100px;
+		display:none;
+		z-index:100;
+	 }
+	 .shouye ul .xx{
+	  position:relative;
+	 }
+	 .shouye ul .xx:hover .xiao{
+	  display:block;
+	 }
+	 .shouye ul .xx .xiao a{
+	  width:192px;
+		height:44px;
+		background:#666;
+		opacity:1;
+		float:left;
+		line-height:43px;
+	 }
+   .shouye ul .xx .xiao a span{
+	  width:172px;
+		height:43px;
+		float:left;
+		border-bottom:1px solid #999;
+		margin-left:10px;
+		font-size:14px;
+	 }
+  .shouye ul .xx .xiao a:hover{
+	 opacity:0.5;
+	}
+	.shouye ul .xx .xiao a span small{
+	 float:right;
+	}
+	.daohang{
+	 width:1000px;
+	 height:46px;
+	 border-bottom:4px solid #eee;
+	 position:fixed;
+	 z-index:1;
+	 top:60;left:50%;margin-left:-500px;
+	 background:#fff;
+	}
+	.daohang ul li{
+	 float:left;
+	 margin-right:132px;
+	}
+	.daohang ul li a{
+	 font-size:15px;
+	 color:#000;
+	 line-height:46px;
+	}
+	.daohang ul .fdj{
+	 width:40px;
+	 height:41px;
+	 float:right;
+	 margin:0px;
+	 padding:5px 0 0 5px;
+	}
+	.daohang ul .fdj img{
+	 float:right;
+	}
+  .daohang ul .fdj span{
+	 float:left;
+	 margin-top:5px;
+	 color:#eee;
+	}
+	.daohang ul .sy{
+	 position:relative;
+	}
+	.daohang ul .sy div{
+	 width:120px;
+	 height:4px;
+	 background:#666;
+	 position:absolute;
+	 top:46px;left:0px;
+	 display:none;
+	}
+	.daohang ul .sy:hover div{
+	  display:block;
+	 }
+	 #box{
+	 	width: 1000px;
+	 	height: 475px;
+	 	background: #FFFFFF;
+	 	position:relative;
+	 	overflow: hidden;
+		z-index:0;
+		margin:0 auto;
+		margin-top:80px;
+	 }
+	 #box ul{
+		position:absolute;left: 0px;top: 0px;
+		width: 5000px;
+	}
+	#box ul li{
+		list-style: none;
+		width:1000px;
+		height:475px;
+		float: left;
+	}
+	 #y, #z{
+	 	width: 80px;
+	 	height: 80px;
+	 	background: black;
+	 }
+	 #y:hover, #z:hover{
+	 	opacity: 1;
+	 }
+	 #y{
+	 	z-index: 500;
+	 	position: absolute;left:900px;top:215px;
+	 	background: url(img/next.png)no-repeat;
+	 	opacity: 0.5;
+	 }
+	 #z{
+	 	z-index: 500;
+	 	position: absolute;left:50px;top:215px;
+	 	background: url(img/pre.png)no-repeat;
+	 	opacity: 0.5;
+	 }
+	 .tupian{
+	 width:1000px;
+	 height:480px;
+	 border-bottom:1px solid #666;
+	 margin:50px auto 0;
+	 }
+	 .tupian div{
+	  width:319px;
+		height:480px;
+		float:left;
+	 }
+	 .tupian .tupian-zhong{
+	  margin:0 21px;
+	 }
+   .tupian div img{
+	  margin-bottom:20px;
+	 }
+	 .tupian p{
+	  float:left;
+		font-size:12px;
+		margin:25px 0 0 130px;
+	 }
+	 .chanping{
+	  width:1000px;
+		height:2300px;
+		background:red;
+		margin:40px auto;
+	 }
+	 .chanping .dhz{
+	  width:318px;
+		height:390px;
+		background:#fff;
+		float:left;
+		margin-right:23px;
+	 }
+	 .chanping .DHZ{
+	  margin:0px;
+	 }
+	 .chanping>.dhz>.exe>img{
+	  width:318px;
+	 }
+	 .chanping .dhz .aleft{
+	  width:216px;
+		height:40px;
+		float:left;
+		line-height:40px;
+		font-size:12px;
+		color:#666;
+		margin-top:10px;
+	 }
+	 .chanping>.dhz>.aleft>img{
+	  width:40px;
+		height:40px;
+		float:left;
+		margin-right:16px;
+		box-shadow: 2px 2px 2px #000;
+	 }
+  .chanping>.dhz>.aright{
+	 width:54px;
+	 height:40px;
+	 background:url(img/11.png)no-repeat 30px 10px;
+	 float:right;
+	 margin-top:10px;
+	 line-height:40px;
+	 font-size:12px;
+	 color:#666;
+	}
+	.chanping .dhz .exe{
+	 width:318px;
+	 height:318px;
+	 position:relative;
+	}
+  .chanping .dhz .exe .xhz{
+	 width:318px;
+	 height:318px;
+	 background:#000;
+	 position:absolute;left:0px;top: 0px;
+   opacity:0.7;
+	 display:none;
+	}
+	 .chanping .dhz .exe .xhz h1{
+	  font-size:24px;
+		color:blue;
+		margin:15px 0 0 15px;
+	 }
+	 .chanping .dhz .exe .xhz h4{
+	  font-size:14px;
+		margin:95px 0 0 40px;
+		color:#fff;
+	 }
+	 .chanping .dhz .exe .xhz p{
+	  font-size:12px;
+		margin:10px 0 0 40px;
+		color:#fff;
+	 }
+   .chanping .dhz .exe:hover .xhz{
+	  display:block;
+	 }
+	 .chanping .mode{
+	  width:150px;
+		height:50px;
+		float:left;
+		border:4px solid green
+	 }
+	</style> 
+ </head>
+ <body>
+   <div class="shouye">
+	  <div class="shouye-1">
+		 <img src='img/1.png'>
+		 <div class="shouye-2">
+		  <ul>
+			 <li class='dr'><a href="#">登入</a></li>
+			 <li class='zc'><a href="#">注册</a></li>
+			 <li><img src="img/2.png"></li>
+			 <li class='gwc'>
+			  <a href="#">购物车</a>
+				<div class='gwc-sp'>
+				 <div class='gwc-top'>
+				  <p>您的购物车暂时没有商品...</p>
+				 </div>
+				 <div class='gwc-bottom'>
+				  <a href="#">快去抢购粮仓商品吧</a>
+				 </div>
+				</div>
+			 </li>
+			 <li><img src="img/2.png"></li>
+			 <li class='xx'> 
+			  <a href="#">消息</a>
+        <div class='xiao'>
+				 <a href="#"><span>动态<small>0</small></span></a>
+				 <a href="#"><span>评论<small>0</small></span></a>
+				 <a href="#"><span>私信<small>0</small></span></a>
+				 <a href="#"><span>粉丝<small>0</small></span></a>
+				 <a href="#"><span>喜欢<small>0</small></span></a>
+				 <a href="#"><span>通知<small>0</small></span></a>
+				</div>
+			 </li>
+			 <li><img src="img/2.png"></li>
+			 <li><a href="#">添加良品</a></li>
+			</ul>
+		 </div>
+		</div>
+	 </div>
+	 <div class="daohang">
+	  <ul>
+		 <li class="sy"> 
+		  <a href="#">首页</a>
+			<div></div>
+		 </li>
+		 <li><a href="#">商店</a></li>
+		 <li><a href="#">杂志</a></li>
+		 <li><a href="#">分享</a></li>
+		 <li><a href="#">达人</a></li>
+		 <li class='fdj'><span>|</span><a href="#"><img src='img/3.png'></a></li>
+		</ul>
+	 </div>
+	<div id="box">
+		
+	  <ul>
+			
+	    <li><a href="#"><img src="img/1130.png"/></a></li>
+			<li><a href="#"><img src="img/1139.jpg"/></a></li>
+			<li><a href="#"><img src="img/1140.jpg"/></a>
+</li>		
+		</ul>
+		<div id="z">
+			
+		</div>
+		<div id="y">
+			
+		</div>
+	
+	</div>
+	<div class="tupian">
+	 <div class="tupian-left">
+	  <a href="#"><img src="img/4.jpg"></a>
+		<a href="#"><img src="img/5.jpg"></a>
+	 </div>
+	 <div class="tupian-zhong">
+	  <a href="#"><img src="img/8.jpg"></a>
+    <p>人气良品</p>
+	 </div>
+	 <div class="tupian-right">
+	  <a href="#"><img src="img/7.jpg"></a>
+		<a href="#"><img src="img/6.jpg"></a>
+	 </div>
+	</div>
+	<div class="chanping">
+	 <div class="dhz">
+	  <div class="exe">
+		 <img src="img/9.jpg">
+		 <div class="xhz">
+		  <h1><i>$68.00</i></h1>
+			<h4>仙人掌多系列功能收纳包|自由伸缩...</h4>
+			<p>来自仙人掌的造型设计 让出行变得更有趣！</p>
+		 </div>
+		</div>
+		<a class="aleft"href="#">
+     <img src="img/10.jpg">
+		 独一有二
+		</a>
+		<a class="aright"href="#">
+		 703
+		</a>
+	 </div>
+	 <div class="dhz">
+	  <div class="exe">
+		 <img src="img/9.jpg">
+		 <div class="xhz">
+		  <h1><i>$68.00</i></h1>
+			<h4>仙人掌多系列功能收纳包|自由伸缩...</h4>
+			<p>来自仙人掌的造型设计 让出行变得更有趣！</p>
+		 </div>
+		</div>
+		<a class="aleft"href="#">
+     <img src="img/10.jpg">
+		 独一有二
+		</a>
+		<a class="aright"href="#">
+		 703
+		</a>
+	 </div>
+	 <div class="dhz DHZ">
+	  <div class="exe">
+		 <img src="img/9.jpg">
+		 <div class="xhz">
+		  <h1><i>$68.00</i></h1>
+			<h4>仙人掌多系列功能收纳包|自由伸缩...</h4>
+			<p>来自仙人掌的造型设计 让出行变得更有趣！</p>
+		 </div>
+		</div>
+		<a class="aleft"href="#">
+     <img src="img/10.jpg">
+		 独一有二
+		</a>
+		<a class="aright"href="#">
+		 703
+		</a>
+	 </div>
+	 <div class="dhz">
+	  <div class="exe">
+		 <img src="img/9.jpg">
+		 <div class="xhz">
+		  <h1><i>$68.00</i></h1>
+			<h4>仙人掌多系列功能收纳包|自由伸缩...</h4>
+			<p>来自仙人掌的造型设计 让出行变得更有趣！</p>
+		 </div>
+		</div>
+		<a class="aleft"href="#">
+     <img src="img/10.jpg">
+		 独一有二
+		</a>
+		<a class="aright"href="#">
+		 703
+		</a>
+	 </div>
+	 <div class="dhz">
+	  <div class="exe">
+		 <img src="img/9.jpg">
+		 <div class="xhz">
+		  <h1><i>$68.00</i></h1>
+			<h4>仙人掌多系列功能收纳包|自由伸缩...</h4>
+			<p>来自仙人掌的造型设计 让出行变得更有趣！</p>
+		 </div>
+		</div>
+		<a class="aleft"href="#">
+     <img src="img/10.jpg">
+		 独一有二
+		</a>
+		<a class="aright"href="#">
+		 703
+		</a>
+	 </div>
+	 <div class="dhz DHZ">
+	  <div class="exe">
+		 <img src="img/9.jpg">
+		 <div class="xhz">
+		  <h1><i>$68.00</i></h1>
+			<h4>仙人掌多系列功能收纳包|自由伸缩...</h4>
+			<p>来自仙人掌的造型设计 让出行变得更有趣！</p>
+		 </div>
+		</div>
+		<a class="aleft"href="#">
+     <img src="img/10.jpg">
+		 独一有二
+		</a>
+		<a class="aright"href="#">
+		 703
+		</a>
+	 </div>
+   <div class="dhz">
+	  <div class="exe">
+		 <img src="img/9.jpg">
+		 <div class="xhz">
+		  <h1><i>$68.00</i></h1>
+			<h4>仙人掌多系列功能收纳包|自由伸缩...</h4>
+			<p>来自仙人掌的造型设计 让出行变得更有趣！</p>
+		 </div>
+		</div>
+		<a class="aleft"href="#">
+     <img src="img/10.jpg">
+		 独一有二
+		</a>
+		<a class="aright"href="#">
+		 703
+		</a>
+	 </div>
+	 <div class="dhz">
+	  <div class="exe">
+		 <img src="img/9.jpg">
+		 <div class="xhz">
+		  <h1><i>$68.00</i></h1>
+			<h4>仙人掌多系列功能收纳包|自由伸缩...</h4>
+			<p>来自仙人掌的造型设计 让出行变得更有趣！</p>
+		 </div>
+		</div>
+		<a class="aleft"href="#">
+     <img src="img/10.jpg">
+		 独一有二
+		</a>
+		<a class="aright"href="#">
+		 703
+		</a>
+	 </div>
+	 <div class="dhz DHZ">
+	  <div class="exe">
+		 <img src="img/9.jpg">
+		 <div class="xhz">
+		  <h1><i>$68.00</i></h1>
+			<h4>仙人掌多系列功能收纳包|自由伸缩...</h4>
+			<p>来自仙人掌的造型设计 让出行变得更有趣！</p>
+		 </div>
+		</div>
+		<a class="aleft"href="#">
+     <img src="img/10.jpg">
+		 独一有二
+		</a>
+		<a class="aright"href="#">
+		 703
+		</a>
+	 </div>
+	 <div class="dhz">
+	  <div class="exe">
+		 <img src="img/9.jpg">
+		 <div class="xhz">
+		  <h1><i>$68.00</i></h1>
+			<h4>仙人掌多系列功能收纳包|自由伸缩...</h4>
+			<p>来自仙人掌的造型设计 让出行变得更有趣！</p>
+		 </div>
+		</div>
+		<a class="aleft"href="#">
+     <img src="img/10.jpg">
+		 独一有二
+		</a>
+		<a class="aright"href="#">
+		 703
+		</a>
+	 </div>
+	 <div class="dhz">
+	  <div class="exe">
+		 <img src="img/9.jpg">
+		 <div class="xhz">
+		  <h1><i>$68.00</i></h1>
+			<h4>仙人掌多系列功能收纳包|自由伸缩...</h4>
+			<p>来自仙人掌的造型设计 让出行变得更有趣！</p>
+		 </div>
+		</div>
+		<a class="aleft"href="#">
+     <img src="img/10.jpg">
+		 独一有二
+		</a>
+		<a class="aright"href="#">
+		 703
+		</a>
+	 </div>
+	 <div class="dhz DHZ">
+	  <div class="exe">
+		 <img src="img/9.jpg">
+		 <div class="xhz">
+		  <h1><i>$68.00</i></h1>
+			<h4>仙人掌多系列功能收纳包|自由伸缩...</h4>
+			<p>来自仙人掌的造型设计 让出行变得更有趣！</p>
+		 </div>
+		</div>
+		<a class="aleft"href="#">
+     <img src="img/10.jpg">
+		 独一有二
+		</a>
+		<a class="aright"href="#">
+		 703
+		</a>
+	 </div>
+	 <div class="dhz">
+	  <div class="exe">
+		 <img src="img/9.jpg">
+		 <div class="xhz">
+		  <h1><i>$68.00</i></h1>
+			<h4>仙人掌多系列功能收纳包|自由伸缩...</h4>
+			<p>来自仙人掌的造型设计 让出行变得更有趣！</p>
+		 </div>
+		</div>
+		<a class="aleft"href="#">
+     <img src="img/10.jpg">
+		 独一有二
+		</a>
+		<a class="aright"href="#">
+		 703
+		</a>
+	 </div>
+	 <div class="dhz">
+	  <div class="exe">
+		 <img src="img/9.jpg">
+		 <div class="xhz">
+		  <h1><i>$68.00</i></h1>
+			<h4>仙人掌多系列功能收纳包|自由伸缩...</h4>
+			<p>来自仙人掌的造型设计 让出行变得更有趣！</p>
+		 </div>
+		</div>
+		<a class="aleft"href="#">
+     <img src="img/10.jpg">
+		 独一有二
+		</a>
+		<a class="aright"href="#">
+		 703
+		</a>
+	 </div>
+	 <div class="dhz DHZ">
+	  <div class="exe">
+		 <img src="img/9.jpg">
+		 <div class="xhz">
+		  <h1><i>$68.00</i></h1>
+			<h4>仙人掌多系列功能收纳包|自由伸缩...</h4>
+			<p>来自仙人掌的造型设计 让出行变得更有趣！</p>
+		 </div>
+		</div>
+		<a class="aleft"href="#">
+     <img src="img/10.jpg">
+		 独一有二
+		</a>
+		<a class="aright"href="#">
+		 703
+		</a>
+	 </div>
+	 <a class="mode" href="#"></a>
+	</div>
+ </body>
+</html>
+<script type="text/javascript" src="animate.js">
+</script>
+<script type="text/javascript">
+		var oBox=document.getElementById('box');
+		var oZ=document.getElementById('z');
+		var oY=document.getElementById('y');
+		var oUl=document.getElementById('box').getElementsByTagName('ul')[0];
+		var oLi=document.getElementById('box').getElementsByTagName('li');
+		var liL=oLi.length;
+		oUl.appendChild(oLi[0].cloneNode(true))
+		var liW=fcs(oLi[0],'width');
+		var coon=0;
+		var timer;
+		var lock=true;
+		function funn(){
+			coon++;
+				animate(oUl,{'left':-coon*liW},1000,function(){
+					if(coon>liL-1){
+						coon=0;
+						this.style.left=0+"px";
+					}
+				})
+		}
+		oZ.onclick=function(){
+			if(oUl.lock){return};
+			coon--;
+			if(coon<0){
+				coon=liL-1;
+				oZ.style=-liW*liL+"px";
+			}
+			animate(oUl,{'left':-liW*coon},1000,function(){
+			
+			})
+	
+		}
+		oY.onclick=function(){
+			if(oUl.lock){return};	
+			funn();
+		}
+		timer=setInterval(function(){
+			funn();
+		},2000)
+		oBox.onmouseover=function(){
+			clearInterval(timer);
+		}
+		oBox.onmouseout=function(){
+			timer=setInterval(function(){
+			funn();
+		},2000)
+		}
+</script>
