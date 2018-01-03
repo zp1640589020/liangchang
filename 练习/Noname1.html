@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+  
+ </body>
+</html>
+<script>
+//	username=zhangsan&possword=123456&status=register
+
+function zhucheng(obj){
+var obj = {
+	username: "zhangsan",
+	password: "123456",
+	status: "register"
+}
+var str='';
+var cant=0;
+var ese=0;
+for(var k in obj){
+  cant++;
+}
+for(var k in obj){
+ ese++;
+ if(cant<ese){
+  str=str+k+'='+obj[k]+'&';
+ }else{
+   str=str+k+'='+obj[k];
+ }
+}
+console.log(str);
+}
+</script>
