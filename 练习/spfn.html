@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+    <style>
+    	li:nth-child(5){
+    		color:red;
+    	}
+    </style>
+	</head>
+	<body>
+		<ul id="move">
+			
+		</ul>
+		<div id="box"></div>
+	</body>
+</html>
+
+<script type="text/javascript" src="js/ajax-1.0.js" ></script>
+<script>
+ajax({
+	method: "GET",
+	url: "http://csit.top/api_cat.php",
+	json: {},
+	cb: function(data) {	
+		var arr=data.data;	 
+		var omove=document.getElementById('move')
+		 for(var i=0;i<arr.length;i++){
+		  var oli=document.createElement('li')
+		  oli.innerHTML+='<a href="#" onclick="fun(' + arr [i].cat_id + ')">'+arr[i].cat_name+"</a>"
+		  omove.appendChild(oli)
+		 }
+	}
+})
+
+function func(data) {
+	ajax({
+		method: "GET",
+		url: "http://csit.top/api_goods.php",
+		json: {
+			cat_id:data, 
+			page: 1,
+			pagesize: 1000
+		},
+		cb: function(data) {
+			var h = ""
+			var arr = data.data 
+			for (var i = 0; i < arr.length; i++) {
+				h += arr[i].goods_name
+	//			h += '<img src="' +  arr[i].goods_thumb+ '" />'
+				h += ", "
+			}
+			document.getElementById("box").innerHTML = h
+		}
+	})
+}
+</script>
